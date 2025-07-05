@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SKY Degree</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode">
+    <div class="app">
+        <div class="container">
+            <header class="header">
+                <div class="logo">SKY Ghana</div>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="dark-mode-toggle" checked>
+                    <label for="dark-mode-toggle" class="toggle-label">
+                        <i class="wi wi-day-sunny"></i>
+                        <i class="wi wi-night-clear"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+            </header>
+            
+            <div class="search-container">
+                <input type="text" id="location-input" placeholder="Search Ghana city...">
+                <button id="search-btn"><i class="wi wi-direction-right"></i></button>
+            </div>
+            
+            <div class="current-weather">
+                <div class="location-info">
+                    <h1 class="city-name" id="city-name">Accra</h1>
+                    <div class="date-time" id="date-time"></div>
+                    <div class="country" id="country">Ghana</div>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span id="current-temp">--</span>
+                        <span class="degree">°C</span>
+                    </div>
+                    
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="" alt="Weather icon">
+                        <div class="weather-description" id="weather-description">--</div>
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="wi wi-thermometer"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">Feels Like</span>
+                            <span class="detail-value" id="feels-like">--°C</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail">
+                        <i class="wi wi-humidity"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">--%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail">
+                        <i class="wi wi-strong-wind"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">Wind Speed</span>
+                            <span class="detail-value" id="wind-speed">-- km/h</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail">
+                        <i class="wi wi-barometer"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">Pressure</span>
+                            <span class="detail-value" id="pressure">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forecast">
+                <h2 class="section-title">5-Day Forecast</h2>
+                <div class="forecast-cards" id="forecast-container">
+                    <div class="loading-text">Loading forecast...</div>
+                </div>
+            </div>
+            
+            <div class="forecast-details" id="forecast-details">
+                <!-- Forecast details will appear here -->
+            </div>
+            
+            <div class="weather-tips">
+                <h2 class="section-title">Weather Tips</h2>
+                <div class="tips-container" id="weather-tips">
+                    <div class="loading-text">Loading weather tips...</div>
+                </div>
+            </div>
+            
+            <div class="nearby-locations">
+                <h2 class="section-title">Nearby Cities</h2>
+                <div class="locations-grid" id="nearby-container">
+                    <!-- Nearby cities will be automatically populated -->
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <p>SKY Ghana &copy; <span id="current-year"></span> | <span class="designer-credit">CompuNerds Ghana</span></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
